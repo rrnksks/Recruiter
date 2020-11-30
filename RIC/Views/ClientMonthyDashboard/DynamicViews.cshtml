@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "DynamicViews";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+<table class="table table-bordered table-striped custab" style="border: 1px solid #909290;" id="tblpartial">
+    <thead>
+        <tr>
+            @foreach (var data in ViewBag.getViews)
+            {
+            <th class="datecss">
+                @Html.Raw(data)
+            </th>
+                
+            }
+
+
+        </tr>
+    </thead>
+    </table>
+
+    @*<ul>
+        @foreach (var data in ViewBag.getViews)
+        {
+            <li>@Html.Raw(data); </li>
+        }
+    </ul>*@
